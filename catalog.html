@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Каталог и заказ — СкрепкаPRO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>СкреPRO</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li>
+        <a href="#">Каталог ▾</a>
+        <div class="submenu">
+          <a href="catalog.html">Все скрепки</a>
+          <a href="catalog.html">Заказать</a>
+        </div>
+      </li>
+      <li><a href="about.html">О компании</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h2>Каталог</h2>
+  <div class="card">Обычные скрепки — 2,5 руб. за упаковку</div>
+  <div class="card">Цветные скрепки — 3,5 руб. за упаковку</div>
+  <div class="card">Большие скрепки — 5 руб. за упаковку</div>
+
+  <h2>Расчёт стоимости заказа</h2>
+
+  <form id="orderForm">
+    <label>Тип скрепок:
+      <select id="clipType">
+        <option value="standard">Обычные (2,5 руб.)</option>
+        <option value="colored">Цветные (3,5 руб.)</option>
+        <option value="giant">Большие (5 руб.)</option>
+      </select>
+    </label>
+
+    <label>Количество упаковок:
+      <input type="number" id="packs" value="10" min="1">
+    </label>
+
+    <label>
+      <input type="checkbox" id="delivery"> Доставка (+300 руб.)
+    </label>
+
+    <button type="submit">Рассчитать</button>
+
+    <div id="result"></div>
+  </form>
+</main>
+
+<footer>© 2026 СкреPRO</footer>
+<script src="script.js"></script>
+</body>
+</html>
